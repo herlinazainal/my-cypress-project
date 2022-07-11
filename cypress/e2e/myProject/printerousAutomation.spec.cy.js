@@ -36,7 +36,7 @@ describe('Automate Printerous website for portfolio', function(){
         })
 
         it('Automate to checkout an items', function(){
-            cy.typeLogin('herlinaz.dummy@gmail.com', 'Print123*')
+            cy.typeLogin('<your email>', '<your password>')
             homeDashboard.navigateToPackagingLabel();
             homeDashboard.selectSticker();
             homeDashboard.clickOrder();
