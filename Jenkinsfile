@@ -3,10 +3,6 @@ import groovy.json.JsonOutput
 pipeline{
     agent any
 
-    environment{
-        BUILD_USER = ''
-    }
-
     parameters{
         string(name: 'SPEC', defaultValue: "cypress/e2e/**/**", description: "Example: cypress/e2e/myProject/*.spec.js")
         choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'], description: "Select the browser where you want to execute your scripts")
