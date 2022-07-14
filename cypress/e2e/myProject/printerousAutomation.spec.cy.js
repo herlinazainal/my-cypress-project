@@ -15,17 +15,17 @@ describe('Automate Printerous website for portfolio', function(){
         it('Verify the hostname of the URL, it should be orion.printerous.com', function(){
             cy.location('hostname').should('eq', 'orion.printerous.com')
         })
-        it('Verify navigate URL, it should be contain text Announcement', function(){
+        it.skip('Verify navigate URL, it should be contain text Announcement', function(){
             cy.get('.ml-2').should('contain.text', 'Announcement')
         })
-        it('Verify when user try to access login page', function(){
+        it.skip('Verify when user try to access login page', function(){
             loginPage.navigateToLogin();
             cy.url().should('eq', 'https://orion.printerous.com/en/login');
         })
-        it('User try to success login', function(){
+        it.skip('User try to success login', function(){
             loginPage.navigateToLogin();
-            loginPage.typeEmail('herlinaz.dummy@gmail.com');
-            loginPage.typePassword('Print123*');
+            loginPage.typeEmail('<your email>');
+            loginPage.typePassword('<your password>');
             loginPage.clickLogin();
         })
     })
@@ -35,7 +35,7 @@ describe('Automate Printerous website for portfolio', function(){
             cy.visit('https://orion.printerous.com/en/login')
         })
 
-        it('Automate to checkout an items', function(){
+        it.skip('Automate to checkout an items', function(){
             cy.typeLogin('<your email>', '<your password>')
             homeDashboard.navigateToPackagingLabel();
             homeDashboard.selectSticker();

@@ -6,10 +6,9 @@
   "scripts": {
     "test": "test",
     "cypress:open": "cypress open",
-    "cypress:chromeHeadless": "cypress run --headless --browser chrome --spec cypress/e2e/myProject/demoBlaze.spec.cy.js",
-    "cypress:edgeHeadless": "cypress run --headless --browser edge --spec cypress/e2e/myProject/demoBlaze.spec.cy.js",
-    "cypress:runHeadlessChrome": "cypress run --headless --browser chrome --spec cypress/e2e/*.spec.cy.js --record --key 68c1157f-e816-47d3-bede-387146d405af",
-    "cypress:browserstackRun": "browserstack-cypress run --sync --spec cypress/e2e/*.cy.js"
+    "cypress:runChrome": "cypress run --headless --browser chrome --spec cypress/e2e/myProject/demoBlaze.spec.cy.js",
+    "cypress:runEdge": "cypress run --headless --browser edge --spec cypress/e2e/myProject/demoBlaze.spec.cy.js",
+    "cypress:runDashboard": "cypress run --headless --browser chrome --spec cypress/e2e/*.spec.cy.js --record --key 68c1157f-e816-47d3-bede-387146d405af"
   },
   "keywords": [
     "e2e",
